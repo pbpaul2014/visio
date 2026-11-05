@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ma Visioconférence Intégrée</title>
+    <!-- Chargement de l'API officielle de Jitsi -->
+    <script src="https://meet.jit.si/external_api.js"></script>
+</head>
+<body>
+
+    <!-- La visioconférence s'affichera directement dans ce bloc -->
+    <div id="mon-bloc-visio" style="width: 100%; height: 600px; border: 1px solid #ccc;"></div>
+
+    <script>
+        const domain = 'meet.jit.si';
+        const options = {
+            // Intégration de votre salon spécifique
+            roomName: 'Conferencevisio201492', 
+            width: '100%',
+            height: '100%',
+            parentNode: document.querySelector('#mon-bloc-visio'),
+            lang: 'fr'
+        };
+        // Lancement de l'intégration dans la page
+        const api = new JitsiMeetExternalAPI(domain, options);
+    </script>
+</body>
+</html>
